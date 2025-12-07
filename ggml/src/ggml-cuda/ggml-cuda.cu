@@ -286,6 +286,9 @@ static ggml_cuda_device_info ggml_cuda_init() {
             CUDA_CHECK(cudaSetDeviceFlags(cudaDeviceScheduleSpin));
         }
 
+        // Eric test
+        CUDA_CHECK(cudaSetDeviceFlags(cudaDeviceScheduleBlockingSync));
+
 #endif  // defined(GGML_USE_HIP)
     }
 
